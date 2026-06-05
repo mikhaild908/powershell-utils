@@ -47,6 +47,9 @@ try {
 
     Write-Host "Scheduled task '$TaskName' created on $RemoteServer (manual run only)." -ForegroundColor Green
 }
+catch {
+    Write-Host "Error: $($_.Exception.Message)" -ForegroundColor Red
+}
 finally {
     if($cimSession) {
         Remove-CimSession $cimSession
