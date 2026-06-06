@@ -1,4 +1,4 @@
-param([string]$server = "SRPSVN07")
+param([string]$server = "SERVER-NAME")
 $credentials = Get-Credential -UserName USER-NAME
 
 Write-Host "Getting services for StackVision Server [$server]`n" -ForegroundColor Green
